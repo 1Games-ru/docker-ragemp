@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 LABEL maintainer="1Games <hello@1games.ru>"
 
-WORKDIR /usr/src/region
+WORKDIR /usr/src/ragemp
 
 RUN echo 'deb http://httpredir.debian.org/debian testing main contrib non-free' > /etc/apt/sources.list \
   && apt-get update \
@@ -19,4 +19,4 @@ EXPOSE 22005 22006
 
 STOPSIGNAL SIGTERM
 
-ENTRYPOINT ["/usr/src/region/ragemp-server"]
+ENTRYPOINT ["/usr/src/ragemp/ragemp-server"]
