@@ -8,7 +8,7 @@ on:
 concurrency: production
 
 jobs:
-  depot-build:
+  docker-build:
     runs-on: ubuntu-latest
     # Permissions to use OIDC token authentication
     permissions:
