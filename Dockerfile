@@ -15,8 +15,9 @@ RUN echo 'deb http://httpredir.debian.org/debian testing main contrib non-free' 
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-EXPOSE 22005 22006
+EXPOSE 22005/tcp 22005/udp 22006/tcp
 
 STOPSIGNAL SIGTERM
 
 ENTRYPOINT ["/usr/src/ragemp/ragemp-server"]
+
